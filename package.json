@@ -1,0 +1,26 @@
+{
+  "name": "trading212-demo-execution-mcp",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest",
+    "live:smoke": "tsx scripts/live-smoke.ts",
+    "live:execution-smoke": "tsx scripts/live-execution-smoke.ts",
+    "replay": "tsx scripts/replay.ts",
+    "validate:strategy": "tsx scripts/validate-strategy.ts",
+    "start": "node dist/src/server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "tsx": "4.23.12",
+    "typescript": "7.0.2",
+    "vitest": "4.1.11"
+  }
+}
